@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body{
+	background: #eee;
+}
+
+.hotel .hotel-list-item .hotel-list-action {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.hotel .hotel-list-item .hotel-list-detail {
+    flex: 1 1 0;
+    -ms-flex: 1 1 0;
+}
+
+
+.hotel .hotel-description {
+    margin: 0 0 1rem 0;
+}
+
+.hotel .hotel-name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.hotel .hotel-local {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hotel .hotel-list-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card-form{
+	width: 25em;
+	margin: 10px auto;
+}

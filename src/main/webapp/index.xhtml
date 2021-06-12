@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="_templateIndex.xhtml">
+	<ui:define name="content">
+
+		<div class="card product">
+			<h:form>
+				<p:dataScroller value="#{hotelBean.hotels}" var="hotel"
+					chunkSize="10">
+
+					<div class="hotel">
+						<div class="hotel-list-item p-p-5">
+							<div class="hotel-list-detail">
+								<div class="hotel-name">#{hotel.name}</div>
+								<div class="hotel-local">#{hotel.local}</div>
+								<div class="hotel-description">#{hotel.description}</div>
+								<p:rating readonly="true" value="0" />
+							</div>
+							<div class="hotel-list-action">
+								<h:outputText value="#{hotel.price}"
+									styleClass="hotel-price">
+									<f:convertNumber currencySymbol="R$" type="currency" />
+								</h:outputText>
+								<p:commandButton value="Alugar" icon="pi pi-calendar" />
+							</div>
+						</div>
+					</div>
+				</p:dataScroller>
+			</h:form>
+		</div>
+
+	</ui:define>
+</ui:composition>
+</html>
